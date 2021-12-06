@@ -74,14 +74,6 @@ router.get(
 
 
 
-//   fetch('/api/session', {
-//     method: 'POST',
-//     headers: {
-//       "Content-Type": "application/json",
-//       "XSRF-TOKEN": `sehrC1PE-C9PP7NAOW7Zs8XIrFv-nRX67G5A`
-//     },
-//     body: JSON.stringify({ credential: '', password: 'password' })
-//   }).then(res => res.json()).then(data => console.log(data));
 
 
 
