@@ -1,0 +1,9 @@
+.songs {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.img {
+    width: 300px;
+}
