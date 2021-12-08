@@ -53,7 +53,7 @@ const CreateSong = ({showModal}) => {
                  placeholder='description'
                  />
                  <button type='submit'>
-                     Add a song
+                     submit
                  </button>
             </form>
         </div>
