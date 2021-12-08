@@ -7,6 +7,7 @@ import AudioPlayer from "../ReactAudioPlayer";
 import '../../components/Songs/songs.css'
 // import User from "../../../../backend/db/models/user";
 import DeleteSong from "../DeleteSong";
+import EditSongModal from "../EditSong";
 
 
 const Songs = () => {
@@ -32,7 +33,10 @@ const Songs = () => {
                     <img src={imgUrl} className='img' />
                     <AudioPlayer songUrl={songUrl} title={title} />
                     {sessionUser?.id === User?.id && (
-                        <DeleteSong id={id}/>
+                        <div>
+                            <DeleteSong id={id}/>
+                            <EditSongModal id={id}/>
+                        </div>
                     )}
                 </div>
                 

@@ -35,13 +35,17 @@ router.delete('/:id(\\d+)', async(req, res) => {
     return res.json(song)
 })
 
-// router.put('/:id(\\d+)', asyncHandler(async(req, res) => {
-//     const song = await Song.findByPk(req.params.id, {
-//         include: User
-//     })
-//     await song.save()
-//     return res.json(song)
-// }))
+router.put('/:id(\\d+)', asyncHandler(async(req, res) => {
+    const song = await Song.findByPk(req.params.id, {
+        include: User
+    })
+    song.title = req.body.title || song.title;
+    song.songUrl = req.body.songUrl || song.songUrl;
+    song.imgUrl = req.body.imgUrl || song.imgUrl;
+    song.description = req.body.description || song.description;
+    await song.save()
+    return res.json({song})
+}))
 
 console.log('test')
 
