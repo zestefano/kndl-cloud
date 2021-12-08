@@ -32,6 +32,7 @@ router.delete('/:id(\\d+)', async(req, res, next) => {
         include: User
     })
     await song.destroy()
+    return res.json(song)
 })
 
 console.log('test')

@@ -53,8 +53,8 @@ export const deleteASong = (id) => async(dispatch) => {
         method: 'DELETE'
     })
     if(response.ok) {
-        const song = await response.json()
-        dispatch(deleteSong(song))
+        // const song = await response.json()
+        dispatch(deleteSong(id))
     }
 }
 
@@ -74,7 +74,7 @@ const songReducer = (state = initialState, action) => {
             return newState
         case DELETE_SONG:
             newState = {...state}
-            delete newState[action.song.id]
+            delete newState[action.song]
             return newState
         default:
             return state;
