@@ -27,13 +27,21 @@ router.post('/', asyncHandler(async(req, res) => {
     return res.json({newSong})
 }))
 
-router.delete('/:id(\\d+)', async(req, res, next) => {
+router.delete('/:id(\\d+)', async(req, res) => {
     const song = await Song.findByPk(req.params.id, {
         include: User
     })
     await song.destroy()
     return res.json(song)
 })
+
+// router.put('/:id(\\d+)', asyncHandler(async(req, res) => {
+//     const song = await Song.findByPk(req.params.id, {
+//         include: User
+//     })
+//     await song.save()
+//     return res.json(song)
+// }))
 
 console.log('test')
 

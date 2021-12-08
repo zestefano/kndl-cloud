@@ -5,7 +5,7 @@ import { deleteASong } from "../../store/songReducer";
 const DeleteSong = ({id}) => {
     const dispatch = useDispatch()
 
-    const onSubmit = (id) => {
+    const onSubmit = () => {
         dispatch(deleteASong(id))
     }
 
