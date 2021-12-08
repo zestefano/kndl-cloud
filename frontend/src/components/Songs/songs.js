@@ -25,7 +25,7 @@ const Songs = () => {
                 <div>
                     <img src={imgUrl} className='img' />
                     <AudioPlayer songUrl={songUrl} title={title} />
-                    {sessionUser.id === User.id && (
+                    {sessionUser?.id === User?.id && (
                         <DeleteSong id={id}/>
                     )}
                 </div>
