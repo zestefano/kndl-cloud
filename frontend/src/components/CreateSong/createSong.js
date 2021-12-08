@@ -31,6 +31,7 @@ const CreateSong = ({showModal}) => {
     return (
         <div>
             <form className='uploadSong' onSubmit={onSubmit}>
+                <h2 className='text'>upload</h2>
                 <input
                     onChange={e => setTitle(e.target.value)}
                     value={title}
@@ -39,12 +40,12 @@ const CreateSong = ({showModal}) => {
                 <input
                     onChange={e => setImgUrl(e.target.value)}
                     value={imgUrl}
-                    placeholder='.jpg'
+                    placeholder='url.jpg'
                  />
                  <input 
                     onChange={e => setSongUrl(e.target.value)}
                     value={songUrl}
-                    placeholder='.mp3'
+                    placeholder='url.mp3'
                  />
                  <input
                  onChange={e => setDescription(e.target.value)}

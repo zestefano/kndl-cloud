@@ -14,6 +14,12 @@ const Songs = () => {
     const sessionUser = useSelector((state) => state.session.user)
     const songs = useSelector((state) => Object.values(state.songs))
 
+    // const [url, setUrl] = useState('')
+    // console.log(url)
+
+    // const songUrl = songs.find(song => song.songUrl === url)
+ 
+
 
     useEffect(() => {
         dispatch(loadAllSongs())
@@ -21,7 +27,7 @@ const Songs = () => {
 
     return (
         <div className='songs'>
-            {songs.map(({id, songUrl, imgUrl, User, title}) => (
+            {songs.map(({imgUrl, songUrl, title, User, id}) => (
                 <div>
                     <img src={imgUrl} className='img' />
                     <AudioPlayer songUrl={songUrl} title={title} />
@@ -31,6 +37,7 @@ const Songs = () => {
                 </div>
                 
                 ))}
+                {/* <AudioPlayer /> */}
         </div>
     )
 }
