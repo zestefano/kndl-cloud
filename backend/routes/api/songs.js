@@ -34,6 +34,6 @@ router.delete('/:id(\\d+)', async(req, res, next) => {
     await song.destroy()
 })
 
-
+console.log('test')
 
 module.exports = router;
