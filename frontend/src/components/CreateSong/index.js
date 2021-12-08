@@ -1,20 +1,22 @@
 import { useState } from "react";
 import { Modal } from "../../context/Modal";
 import CreateSong from "./createSong";
-
+import '../CreateSong/createSong.css'
 
 const UploadSong = () => {
-    const [showModal, setShowModal] = useState(false)
+    const [modal, setModal] = useState(false)
 
     return (
         <div>
-            <button onClick={() => setShowModal(true)}>
+            <button onClick={() => setModal(true)}>
                 Upload Song
             </button>
-            {showModal && (
-                <Modal onClose={() => setShowModal(false)}>
-                    <CreateSong showModal={setShowModal}/>
-                </Modal>
+            {modal && (
+                <div>
+                    <Modal onClose={() => setModal(false)}>
+                        <CreateSong showModal={setModal}/>
+                    </Modal>
+                </div>
             )}
         </div>
     )

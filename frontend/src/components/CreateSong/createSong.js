@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 
 
 import { createASong } from "../../store/songReducer";
+import '../CreateSong/createSong.css'
 
 const CreateSong = ({showModal}) => {
     const dispatch = useDispatch()
@@ -28,8 +29,8 @@ const CreateSong = ({showModal}) => {
     }
 
     return (
-        <div className='uploadSong'>
-            <form onSubmit={onSubmit}>
+        <div>
+            <form className='uploadSong' onSubmit={onSubmit}>
                 <input
                     onChange={e => setTitle(e.target.value)}
                     value={title}

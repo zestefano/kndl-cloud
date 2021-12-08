@@ -53,7 +53,6 @@ export const deleteASong = (id) => async(dispatch) => {
         method: 'DELETE'
     })
     if(response.ok) {
-        // const song = await response.json()
         dispatch(deleteSong(id))
     }
 }
