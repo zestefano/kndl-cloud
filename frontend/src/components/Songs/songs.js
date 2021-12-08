@@ -5,6 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { loadAllSongs } from "../../store/songReducer";
 import AudioPlayer from "../ReactAudioPlayer";
 import '../../components/Songs/songs.css'
+// import User from "../../../../backend/db/models/user";
+import DeleteSong from "../DeleteSong";
 
 
 const Songs = () => {
@@ -22,14 +24,17 @@ const Songs = () => {
 
     return (
         <div className='songs'>
-            {songs.map(song => (
+            {songs.map(({id, songUrl, imgUrl, User, title}) => (
                 <div
                     // value={songUrl}
                     // onClick={e => setSongUrl(e.target.value)}
                  >
-                    <img src={song.imgUrl} className='img' />
-                    <AudioPlayer songUrl={song.songUrl} title={song.title} />
+                    <img src={imgUrl} className='img' />
+                    <AudioPlayer songUrl={songUrl} title={title} />
                     {/* <p>{song.songUrl}</p> */}
+                    {sessionUser.id === User.id && (
+                        <DeleteSong id={id}/>
+                    )}
                 </div>
                 
                 ))}
