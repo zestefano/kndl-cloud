@@ -9,7 +9,7 @@ const UploadSong = () => {
     return (
         <div>
             <button onClick={() => setModal(true)}>
-                Upload Song
+                upload 
             </button>
             {modal && (
                 <div>

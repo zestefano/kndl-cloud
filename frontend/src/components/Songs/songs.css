@@ -1,9 +1,21 @@
-.songs {
+.songsContainer {
     display: flex;
     justify-content: center;
-    flex-direction: column-reverse;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 75%;
+    margin: auto;
+    padding: 10px;
+    border: 3px solid lightgray;
+    /* margin-left: 50%;
+    margin-right: 50%; */
+    
 }
 
 .img {
     width: 300px;
+    height: 300px;
+    margin: auto;
+    padding: 10px;
 }

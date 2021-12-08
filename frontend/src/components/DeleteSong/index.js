@@ -15,7 +15,7 @@ const DeleteSong = ({id}) => {
             onClick={() => onSubmit(id)}
             id={id}
             >
-                Delete
+                delete
             </button>
         </div>
     )

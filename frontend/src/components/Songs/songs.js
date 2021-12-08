@@ -27,7 +27,7 @@ const Songs = () => {
     }, [dispatch])
 
     return (
-        <div className='songs'>
+        <div className='songsContainer'>
             {songs.map(({imgUrl, songUrl, title, User, id}) => (
                 <div>
                     <img src={imgUrl} className='img' />
