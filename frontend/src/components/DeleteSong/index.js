@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
 import { deleteASong } from "../../store/songReducer";
+import '../DeleteSong/deleteSong.css'
 
 
 const DeleteSong = ({id}) => {
@@ -10,7 +11,7 @@ const DeleteSong = ({id}) => {
     }
 
     return (
-        <div>
+        <div className='delete'>
             <button
             onClick={() => onSubmit(id)}
             id={id}

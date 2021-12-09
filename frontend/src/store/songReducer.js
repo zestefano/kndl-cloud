@@ -5,6 +5,7 @@ const LOAD_SONGS = 'songs/getSongs'
 const CREATE_SONG = 'songs/createSong'
 const DELETE_SONG = 'songs/deleteSong'
 const EDIT_SONG = 'songs/editSong'
+const LOAD_SINGLE_SONG = 'songs/loadSingleSong'
 
 
 export const loadSongs = (songs) => {
@@ -35,11 +36,26 @@ const editSong = (song) => {
     }
 }
 
+const loadSingleSong = (song) => {
+    return {
+        type: LOAD_SINGLE_SONG,
+        song
+    }
+}
+
 export const loadAllSongs = () => async(dispatch) => {
     const response = await csrfFetch('/api/songs')
     if(response.ok) {
         const songs = await response.json()
         dispatch(loadSongs(songs))
+    }
+}
+
+export const loadOneSong = (id) => async(dispatch) =>{
+    const response = await csrfFetch(`/api/songs/${id}`)
+    if(response.ok) {
+        const song = await response.json()
+        dispatch(loadSingleSong(song))
     }
 }
 
@@ -99,6 +115,10 @@ const songReducer = (state = initialState, action) => {
             newState = {...state}
             newState[action.song.song.id] = action.song.song
             return newState
+        case LOAD_SINGLE_SONG:
+             newState = {...state}
+             newState[action.song.id] = action.song
+             return newState
         default:
             return state;
     }

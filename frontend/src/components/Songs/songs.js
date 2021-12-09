@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { loadAllSongs } from "../../store/songReducer";
+import { Link } from "react-router-dom";
 import AudioPlayer from "../ReactAudioPlayer";
 import '../../components/Songs/songs.css'
 // import User from "../../../../backend/db/models/user";
@@ -29,15 +30,24 @@ const Songs = () => {
     return (
         <div className='songsContainer'>
             {songs.map(({imgUrl, songUrl, title, User, id}) => (
-                <div>
-                    <img src={imgUrl} className='img' />
-                    <AudioPlayer songUrl={songUrl} title={title} />
+                <div className='song'>
+                    <div className='pad'>
                     {sessionUser?.id === User?.id && (
-                        <div>
+                        <div className='button'>
                             <DeleteSong id={id}/>
                             <EditSongModal id={id}/>
                         </div>
                     )}
+                    <Link className='songLink' id='link' to={`/${id}`}>{title}</Link>
+                        <img src={imgUrl} className='img' />
+                    <AudioPlayer songUrl={songUrl} title={title} />
+                    </div>
+                    {/* {sessionUser?.id === User?.id && (
+                        <div className='button'>
+                            <DeleteSong id={id}/>
+                            <EditSongModal id={id}/>
+                        </div>
+                    )} */}
                 </div>
                 
                 ))}
