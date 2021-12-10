@@ -6,7 +6,6 @@ import { loadAllSongs } from "../../store/songReducer";
 import { Link } from "react-router-dom";
 import AudioPlayer from "../ReactAudioPlayer";
 import '../../components/Songs/songs.css'
-// import User from "../../../../backend/db/models/user";
 import DeleteSong from "../DeleteSong";
 import EditSongModal from "../EditSong";
 
@@ -34,10 +33,11 @@ const Songs = () => {
                     <div className='pad'>
                     {sessionUser?.id === User?.id && (
                         <div className='button'>
-                            <DeleteSong id={id}/>
                             <EditSongModal id={id}/>
+                            <DeleteSong id={id}/>
                         </div>
                     )}
+                    <p>{User.username}</p>
                     <Link className='songLink' id='link' to={`/${id}`}>{title}</Link>
                         <img src={imgUrl} className='img' />
                     <AudioPlayer songUrl={songUrl} title={title} />

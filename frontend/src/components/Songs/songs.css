@@ -9,9 +9,16 @@
     padding: 10px;
     border: 3px solid lightgray;
     background-color: rgba(255, 255, 255, 0.091);
-    /* margin-left: 50%;
-    margin-right: 50%; */
 }
+
+/* .songContainer {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+} */
 
 .img {
     width: 300px;
