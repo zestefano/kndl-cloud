@@ -1,7 +1,7 @@
 const express = require('express')
 const asyncHandler = require('express-async-handler')
 const { check, validationResult } = require('express-validator')
-const { User, Song } = require('../../db/models')
+const { User, Song, Comment } = require('../../db/models')
 const { handleValidationErrors } = require('../../utils/validation')
 
 const router = express.Router()
@@ -50,9 +50,9 @@ router.put('/:id(\\d+)', asyncHandler(async(req, res) => {
 
 router.get('/:id(\\d+)', asyncHandler(async(req, res) => {
     const song = await Song.findByPk(req.params.id, {
-        include: User
+        include: [User, Comment]
     })
-    console.log(req.params, 'REWRWERWERWER')
+    // console.log(req.params, 'REWRWERWERWER')
     return res.json(song)
 }))
 

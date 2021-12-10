@@ -4,11 +4,14 @@ import profileReducer from "./profileReducer";
 
 import sessionReducer from './session';
 import songReducer from "./songReducer";
+import commentReducer from "./commentReducer";
+
 
 const rootReducer = combineReducers({
   session: sessionReducer,
   songs: songReducer,
-  profile: profileReducer
+  profile: profileReducer,
+  comments: commentReducer
 });
 
 let enhancer;

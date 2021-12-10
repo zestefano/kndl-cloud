@@ -18,6 +18,13 @@ module.exports = {
         updatedAt: new Date()
       },
       {
+        comment: 'i love this song also 222',
+        userId: 1,
+        songId: 2,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
         comment: 'i love this song too',
         userId: 1,
         songId: 3,

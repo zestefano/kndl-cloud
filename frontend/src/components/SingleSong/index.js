@@ -6,6 +6,8 @@ import { useParams } from "react-router-dom";
 import { loadOneSong } from "../../store/songReducer";
 import { loadAllSongs } from "../../store/songReducer";
 import AudioPlayer from "../ReactAudioPlayer";
+// import AddComment from "../Comments/addComment";
+import Comments from "../Comments";
 import '../SingleSong/singleSong.css'
 
 
@@ -16,18 +18,33 @@ const SinleSong = () => {
     // const songs = useSelector((state) => Object.values(state.songs))
     // const song = songs.find(song => song.songId === songs.id)
     const song = useSelector(state => state?.songs[songId])
-    console.log(song, 'fefeefefef')
+    // const comments = useSelector(state => state?.comments)
+    // console.log(comments)
+    // console.log(song?.Comments?.map(comment => comment?.comment), 'fefeefefef')
+    // const comments = song?.Comments?.map(comment => comment?.comment)
+    const userId = song?.User?.id
 
+    // console.log(comments)
+    console.log(userId)
+    
     useEffect(() => {
         dispatch(loadOneSong(songId))
-    }, [dispatch, songId])
+    }, [dispatch])
 
     return (
-        <div className='songContainer'>
-            <h2>{song?.title}</h2>
-            <img className='img' src={song?.imgUrl} />
-            <div>{song?.description}</div>
-            <AudioPlayer songUrl={song?.songUrl}/>
+        <div>
+            <div className='songContainer'>
+                <h2>{song?.title}</h2>
+                <img className='img' src={song?.imgUrl} />
+                <div>{song?.description}</div>
+                <AudioPlayer songUrl={song?.songUrl}/>
+            </div>
+                {/* <ul>
+                    {comments?.map((comment) => (
+                        <div>{comment}</div>
+                    ))}
+                </ul> */}
+                <Comments songId={songId} userId={userId} />
         </div>
     )
 }

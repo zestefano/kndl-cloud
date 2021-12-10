@@ -6,7 +6,7 @@ const AudioPlayer = ({songUrl, title}) => {
         <div>
             <ReactAudioPlayer
             src={songUrl}
-            autoPlay
+            autoPlay={false}
             controls
             />
         </div>
