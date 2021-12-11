@@ -1,12 +1,18 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+// import { useHistory } from "react-router";
+import { restoreUser } from "../../store/session";
+
 
 import { addAComment } from "../../store/commentReducer";
 import '../Comments/addComment.css'
 
 
+
 const AddComment = ({userId, songId, showModal}) => {
+    
     const dispatch = useDispatch()
+    // const history = useHistory()
     // const sessionUser = useSelector((state) => state.session.user)
 
     // const user = useSelector(state => state.session.user)
@@ -25,9 +31,13 @@ const AddComment = ({userId, songId, showModal}) => {
             songId
             
         }
+        // dispatch(sessionActions.restoreUser()).then(() => setIsLoaded(true));
         await dispatch(addAComment(newComment))
+        // .then(() => history.push(`/${songId}`))
         setComment('')
         showModal(false)
+        
+        
     }
 
 

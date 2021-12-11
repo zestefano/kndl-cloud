@@ -1,10 +1,12 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import DeleteComment from "./deleteComment";
+import EditComment from "./editComment";
 
 
 
 import { getAllComments } from "../../store/commentReducer";
+import EditCommentModal from "./editCommentModal";
 
 
 const GetComments = ({userId, songId}) => {
@@ -27,6 +29,9 @@ const GetComments = ({userId, songId}) => {
                 {sessionUser?.id === User?.id && (
                         <div>
                             <DeleteComment id={id}/>
+                            <div>
+                            <EditCommentModal id={id} />
+                            </div>
                         </div>
                     )}
             </div>
