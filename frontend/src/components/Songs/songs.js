@@ -16,7 +16,7 @@ const Songs = () => {
     const songs = useSelector((state) => Object.values(state.songs))
 
     // const [url, setUrl] = useState('')
-    // console.log(url)
+
 
     // const songUrl = songs.find(song => song.songUrl === url)
  

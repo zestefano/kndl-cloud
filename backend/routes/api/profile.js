@@ -8,7 +8,6 @@ const router = express.Router()
 
 
 router.get('/:id(\\d+)', asyncHandler(async(req, res) => {
-    console.log('hiiitttttt')
     const id = req.params.id
     const songs = await Song.findAll({
         include: User,
