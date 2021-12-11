@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import GetComments from './loadComments';
 // import AddComment from './addComment';
 import AddCommentModal from './addCommentModal';
+import EditCommentModal from './editCommentModal';
 
 
 

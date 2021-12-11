@@ -39,6 +39,7 @@ router.put('/:id(\\d+)', asyncHandler(async(req, res) => {
     const song = await Song.findByPk(req.params.id, {
         include: User
     })
+    
     song.title = req.body.title || song.title;
     song.songUrl = req.body.songUrl || song.songUrl;
     song.imgUrl = req.body.imgUrl || song.imgUrl;

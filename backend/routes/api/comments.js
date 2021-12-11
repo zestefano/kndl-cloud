@@ -17,7 +17,10 @@ router.post('/', asyncHandler(async(req, res) => {
         comment
     }
     const newComment = await Comment.create(comments)
-    res.json(newComment)
+    const commentWithInfo = await Comment.findByPk(newComment.id, { include: [User, Song] })
+    res.json(commentWithInfo)
+    
+    // res.json(newComment)
 }))
 
 router.get('/', asyncHandler(async(req, res) => {
@@ -35,5 +38,15 @@ router.delete('/:id(\\d+)', async(req, res) => {
     await comment.destroy()
     return res.json(comment)
 })
+
+router.put('/:id(\\d+)', asyncHandler(async(req, res) => {
+    const comment = await Comment.findByPk(req.params.id, {
+        include: User
+    })
+    
+    comment.comment = req.body.comment || comment.comment;
+    await comment.save()
+    return res.json({comment})
+}))
 
 module.exports = router;
