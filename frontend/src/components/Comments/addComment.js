@@ -4,13 +4,17 @@ import { useDispatch, useSelector } from "react-redux";
 import { addAComment } from "../../store/commentReducer";
 import '../Comments/addComment.css'
 
+
 const AddComment = ({userId, songId, showModal}) => {
     const dispatch = useDispatch()
-    
+    // const sessionUser = useSelector((state) => state.session.user)
+
+    // const user = useSelector(state => state.session.user)
+
 
     const [comment, setComment] = useState('')
     // const comments = useSelector((state) => Object.values(state.comments))
-    // console.log(comments)
+  
     const onSubmit = async(e) => {
         e.preventDefault()
         
@@ -19,6 +23,7 @@ const AddComment = ({userId, songId, showModal}) => {
             comment,
             userId,
             songId
+            
         }
         await dispatch(addAComment(newComment))
         setComment('')

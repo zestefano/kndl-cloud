@@ -124,6 +124,5 @@ const songReducer = (state = initialState, action) => {
     }
 }
 
-console.log('deleteWorkking')
 
 export default songReducer;

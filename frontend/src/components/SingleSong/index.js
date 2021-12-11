@@ -19,13 +19,9 @@ const SinleSong = () => {
     // const song = songs.find(song => song.songId === songs.id)
     const song = useSelector(state => state?.songs[songId])
     // const comments = useSelector(state => state?.comments)
-    // console.log(comments)
-    // console.log(song?.Comments?.map(comment => comment?.comment), 'fefeefefef')
     // const comments = song?.Comments?.map(comment => comment?.comment)
     const userId = song?.User?.id
 
-    // console.log(comments)
-    console.log(userId)
     
     useEffect(() => {
         dispatch(loadOneSong(songId))

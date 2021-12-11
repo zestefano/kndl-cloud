@@ -52,10 +52,8 @@ router.get('/:id(\\d+)', asyncHandler(async(req, res) => {
     const song = await Song.findByPk(req.params.id, {
         include: [User, Comment]
     })
-    // console.log(req.params, 'REWRWERWERWER')
     return res.json(song)
 }))
 
-// console.log('test')
 
 module.exports = router;
