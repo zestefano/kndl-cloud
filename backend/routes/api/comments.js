@@ -20,7 +20,6 @@ router.post('/', asyncHandler(async(req, res) => {
     const commentWithInfo = await Comment.findByPk(newComment.id, { include: [User, Song] })
     res.json(commentWithInfo)
     
-    // res.json(newComment)
 }))
 
 router.get('/', asyncHandler(async(req, res) => {

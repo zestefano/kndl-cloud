@@ -28,12 +28,12 @@ const Songs = () => {
 
     return (
         <div className='songsContainer'>
-            {songs.map(({imgUrl, songUrl, title, User, id}) => (
+            {songs.map(({imgUrl, songUrl, title, User, id, description}) => (
                 <div className='song'>
                     <div className='pad'>
                     {sessionUser?.id === User?.id && (
                         <div className='button'>
-                            <EditSongModal id={id}/>
+                            <EditSongModal id={id} editImg={imgUrl} editTitle={title} editSong={songUrl} editDescription={description}/>
                             <DeleteSong id={id}/>
                         </div>
                     )}

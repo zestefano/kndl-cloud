@@ -30,7 +30,7 @@ const GetComments = ({userId, songId}) => {
                         <div>
                             <DeleteComment id={id}/>
                             <div>
-                            <EditCommentModal id={id} />
+                            <EditCommentModal id={id} commentValue={comment} />
                             </div>
                         </div>
                     )}
