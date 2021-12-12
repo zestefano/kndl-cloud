@@ -19,7 +19,7 @@ const DeleteComment = ({id}) => {
         // history.push(`/${songId}`)
     }
     return (
-        <div className='delete'>
+        <div>
             <button
             onClick={() => onSubmit(id)}
             id={id}

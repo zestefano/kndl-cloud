@@ -1,11 +1,12 @@
 import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { editAComment } from "../../store/commentReducer";
+import '../Comments/editComment.css'
 
-const EditComment = ({id, showModal}) => {
+const EditComment = ({id, showModal, commentValue}) => {
     const dispatch = useDispatch()
 
-    const [comment, setComment] = useState('')
+    const [comment, setComment] = useState(commentValue)
 
     const onSubmit = async(e) => {
         e.preventDefault()
@@ -21,12 +22,13 @@ const EditComment = ({id, showModal}) => {
 
     return (
         <div>
-            <form onSubmit={onSubmit}>
-                <input
+            <form className='editCommentForm' onSubmit={onSubmit}>
+                <h2 className='text'>edit comment</h2>
+                <textarea
                 onChange={e => setComment(e.target.value)}
                 value={comment}
-                type='text'
-                placeholder='edit comment'
+                type='textarea'
+                // placeholder='edit comment'
                 />
                 <button>submit</button>
             </form>

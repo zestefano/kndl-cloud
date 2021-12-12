@@ -5,7 +5,7 @@ import EditSong from "./editSong";
 import '../EditSong/editSong.css'
 
 
-const EditSongModal = ({id}) => {
+const EditSongModal = ({id, editImg, editSong, editTitle, editDescription}) => {
     const [modal, setModal] = useState(false)
 
     return (
@@ -17,7 +17,7 @@ const EditSongModal = ({id}) => {
             </div>
             {modal && (
                 <Modal onClose={() => setModal(false)}>
-                    <EditSong id={id} showModal={setModal} />
+                    <EditSong id={id} showModal={setModal} editImg={editImg} editTitle={editTitle} editSong={editSong} editDescription={editDescription}/>
                 </Modal>
             )}
         </div>
