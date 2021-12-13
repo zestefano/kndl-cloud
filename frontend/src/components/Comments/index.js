@@ -13,7 +13,7 @@ const Comments = ({userId, songId}) => {
 
     return (
         <div>
-            {sessionUser?.id === userId && (
+            {sessionUser && (
                 <div>
                     <AddCommentModal userId={userId} songId={songId}/>
                 </div>
