@@ -9,8 +9,13 @@
     padding: 10px;
     border: 3px solid lightgray;
     background-color: rgba(255, 255, 255, 0.091);
+    /* background-color: black; */
     margin-top: 100px;
 }
+
+/* body {
+    background-color: rgb(203, 133, 29);
+} */
 
 /* .songContainer {
     width: 100vw;

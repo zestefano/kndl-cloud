@@ -21,11 +21,16 @@ function LoginForm() {
     );
   };
 
+  const demo = () => {
+    setCredential('demo')
+    setPassword('password')
+  }
+
   return (
     <form className='login' onSubmit={handleSubmit}>
       <ul>
         {errors.map((error, idx) => (
-          <li key={idx}>{error}</li>
+          <li className='error' key={idx}>{error}</li>
         ))}
       </ul>
       {/* <label className='text'> */}
@@ -51,6 +56,7 @@ function LoginForm() {
         />
       {/* </label> */}
       <button className='submit' type="submit">Log In</button>
+      <button className='submit' onClick={demo}>demo</button>
     </form>
   );
 }

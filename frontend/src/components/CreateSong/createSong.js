@@ -14,8 +14,10 @@ const CreateSong = ({showModal}) => {
     const [imgUrl, setImgUrl] = useState('')
     const [songUrl, setSongUrl] = useState('')
     const [description, setDescription] = useState('')
+    const [errors, setErrors] = useState([])
 
     const onSubmit = async(e) => {
+        setErrors([])
         e.preventDefault()
         const song = {
             title, 
@@ -24,13 +26,25 @@ const CreateSong = ({showModal}) => {
             userId,
             description
         }
-        await dispatch(createASong(song))
-        showModal(false)
+        let errs;
+        await dispatch(createASong(song)).catch(async(res) => {
+            const songData = await res.json()
+            if(songData && songData.errors) setErrors(songData.errors)
+            errs = songData.errors
+        })
+        if(!errs) {
+            showModal(false)
+        }
     }
 
     return (
         <div>
             <form className='uploadSong' onSubmit={onSubmit}>
+                <ul>
+                    {errors.map((error, idx) => (
+                        <li key={idx} className='error'>{error}</li>
+                    ))}
+                </ul>
                 <h2 className='text'>upload</h2>
                 <input
                     onChange={e => setTitle(e.target.value)}

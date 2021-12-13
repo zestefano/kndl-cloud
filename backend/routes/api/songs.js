@@ -7,6 +7,29 @@ const { handleValidationErrors } = require('../../utils/validation')
 const router = express.Router()
 
 
+const songValidator = [
+    check('title')
+        .exists()
+        .not()
+        .isEmpty()
+        .withMessage('Song must have a title'),
+    check('songUrl')
+        .exists()
+        .isURL()
+        .withMessage('Song must have a url.mp3'),
+    check('imgUrl')
+        .exists()
+        .isURL()
+        .withMessage('Song must have an image.jpg'),
+    check('description')
+        .exists()
+        .not()
+        .isEmpty()
+        .withMessage('Song must have a description'),
+    handleValidationErrors
+  ]
+
+
 router.get('/', asyncHandler(async(req, res) => {
     const songs = await Song.findAll({
         include: User
@@ -15,9 +38,12 @@ router.get('/', asyncHandler(async(req, res) => {
 }))
 
 
-router.post('/', asyncHandler(async(req, res) => {
+router.post('/', songValidator, asyncHandler(async(req, res) => {
     const {title, songUrl, imgUrl, userId, description} = req.body;
 
+    const songError = validationResult(req)
+
+    if(songError.isEmpty()) {
     const song = await Song.create({
         title, songUrl, imgUrl, userId, description
     })
@@ -25,6 +51,10 @@ router.post('/', asyncHandler(async(req, res) => {
         include: User
     })
     return res.json({newSong})
+    } else {
+        let errors = songError.array().map(error => error.msg)
+        return res.json({errors})
+    }
 }))
 
 router.delete('/:id(\\d+)', async(req, res) => {

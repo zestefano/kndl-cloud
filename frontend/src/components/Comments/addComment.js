@@ -1,27 +1,19 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-// import { useHistory } from "react-router";
-import { restoreUser } from "../../store/session";
-
+import { useDispatch } from "react-redux";
 
 import { addAComment } from "../../store/commentReducer";
 import '../Comments/addComment.css'
 
-
-
 const AddComment = ({userId, songId, showModal}) => {
     
     const dispatch = useDispatch()
-    // const history = useHistory()
-    // const sessionUser = useSelector((state) => state.session.user)
-
-    // const user = useSelector(state => state.session.user)
 
 
     const [comment, setComment] = useState('')
-    // const comments = useSelector((state) => Object.values(state.comments))
+    const [errors, setErrors] = useState([])
   
     const onSubmit = async(e) => {
+        setErrors([])
         e.preventDefault()
         
 
@@ -31,11 +23,16 @@ const AddComment = ({userId, songId, showModal}) => {
             songId
             
         }
-        // dispatch(sessionActions.restoreUser()).then(() => setIsLoaded(true));
-        await dispatch(addAComment(newComment))
-        // .then(() => history.push(`/${songId}`))
-        setComment('')
-        showModal(false)
+        let errs;
+        await dispatch(addAComment(newComment)).catch(async(res) => {
+            const commentData = await res.json()
+            if(commentData && commentData.errors) setErrors(commentData.errors)
+            errs = commentData.errors
+        })
+        if(!errs) {
+            setComment('')
+            showModal(false)
+        }
         
         
     }
@@ -44,6 +41,11 @@ const AddComment = ({userId, songId, showModal}) => {
     return (
         <div>
             <form className='addComment' onSubmit={onSubmit}>
+                <ul>
+                    {errors.map((error, idx) => (
+                        <li className='error' key={idx}>{error}</li>
+                    ))}
+                </ul>
                 <textarea
                 type='text'
                 placeholder='add comment'
@@ -51,6 +53,7 @@ const AddComment = ({userId, songId, showModal}) => {
                 value={comment}
                 />
                 <button
+                className='submit'
                 disabled={comment ? false : true}
                 >submit</button>
             </form>
