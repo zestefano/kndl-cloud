@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import DeleteComment from "./deleteComment";
 import EditComment from "./editComment";
-
+import './comments.css'
 
 
 import { getAllComments } from "../../store/commentReducer";
@@ -22,12 +22,22 @@ const GetComments = ({userId, songId}) => {
 
 
     return (
-        <div>
+        <div className='commentsContainer'>
+            
             {comments?.map(({comment, User, Song, id}) => (
-            <div>
-                {comment}
+            <div className='commentUser'>
+                <div></div>
+                <break />
+                <break />
+                <div className='commentUser'>
+                    <b>{User.username}:</b>
+                </div>
+                <break />
+                <div>
+                    {comment}
+                </div>
                 {sessionUser?.id === User?.id && (
-                        <div>
+                        <div className='editDelete'>
                             <DeleteComment id={id}/>
                             <div>
                             <EditCommentModal id={id} commentValue={comment} />

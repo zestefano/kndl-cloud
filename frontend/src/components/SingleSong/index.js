@@ -30,17 +30,18 @@ const SinleSong = () => {
     return (
         <div>
             <div className='songContainer'>
+                <h2>{song?.User?.username}</h2>
                 <h2>{song?.title}</h2>
                 <img className='img' src={song?.imgUrl} />
                 <div>{song?.description}</div>
                 <AudioPlayer songUrl={song?.songUrl}/>
             </div>
-                {/* <ul>
-                    {comments?.map((comment) => (
-                        <div>{comment}</div>
-                    ))}
-                </ul> */}
+            <h2 className='commentSection'>
+                comments:
+            </h2>
+            <div className='commentSection'>
                 <Comments songId={songId} userId={userId} />
+            </div>
         </div>
     )
 }

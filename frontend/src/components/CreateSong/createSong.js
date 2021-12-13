@@ -47,12 +47,12 @@ const CreateSong = ({showModal}) => {
                     value={songUrl}
                     placeholder='url.mp3'
                  />
-                 <input
+                 <textarea
                  onChange={e => setDescription(e.target.value)}
                  value={description}
                  placeholder='description'
                  />
-                 <button type='submit'>
+                 <button type='submit' className='submit'>
                      submit
                  </button>
             </form>

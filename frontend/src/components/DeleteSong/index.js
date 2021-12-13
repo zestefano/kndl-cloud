@@ -16,7 +16,7 @@ const DeleteSong = ({id}) => {
             onClick={() => onSubmit(id)}
             id={id}
             >
-                delete
+                <i class="fas fa-trash"></i>
             </button>
         </div>
     )

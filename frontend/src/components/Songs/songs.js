@@ -37,17 +37,11 @@ const Songs = () => {
                             <DeleteSong id={id}/>
                         </div>
                     )}
-                    <p>{User.username}</p>
-                    <Link className='songLink' id='link' to={`/${id}`}>{title}</Link>
+                    {/* <p className='songLink'>{User.username}</p> */}
+                    <Link className='songLink' id='link' to={`/${id}`}>{User.username}  -  {title}</Link>
                         <img src={imgUrl} className='img' />
                     <AudioPlayer songUrl={songUrl} title={title} />
                     </div>
-                    {/* {sessionUser?.id === User?.id && (
-                        <div className='button'>
-                            <DeleteSong id={id}/>
-                            <EditSongModal id={id}/>
-                        </div>
-                    )} */}
                 </div>
                 
                 ))}

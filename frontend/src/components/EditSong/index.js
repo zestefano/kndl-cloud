@@ -12,7 +12,7 @@ const EditSongModal = ({id, editImg, editSong, editTitle, editDescription}) => {
         <div>
             <div className='edit'>
             <button onClick={() => setModal(true)}>
-                edit
+                <i class="fas fa-edit"></i>
             </button>
             </div>
             {modal && (
