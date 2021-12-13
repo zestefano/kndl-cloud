@@ -33,7 +33,6 @@ function LoginForm() {
           <li className='error' key={idx}>{error}</li>
         ))}
       </ul>
-      {/* <label className='text'> */}
       <h2 className='text'>login</h2>
        
         <input
@@ -44,8 +43,6 @@ function LoginForm() {
           onChange={(e) => setCredential(e.target.value)}
           required
         />
-      {/* </label> */}
-      {/* <label className='text'> */}
      
         <input
           placeholder='password'
@@ -54,7 +51,6 @@ function LoginForm() {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-      {/* </label> */}
       <button className='submit' type="submit">Log In</button>
       <button className='submit' onClick={demo}>demo</button>
     </form>

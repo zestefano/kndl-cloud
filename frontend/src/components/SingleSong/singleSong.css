@@ -1,6 +1,6 @@
-.img {
-    width: 300px;
-    height: 300px;
+.imgSingle {
+    width: 500px;
+    height: 500px;
     margin: auto;
     padding: 10px;
 }
@@ -15,14 +15,11 @@
     width: 75%;
     margin: auto;
     padding: 10px;
-    border: 3px solid lightgray;
+    border: 3px solid gray;
     margin-top: 100px;
-    /* margin-left: 50%;
-    margin-right: 50%; */
 }
 
 .commentSection {
     display: flex;
     justify-content: center;
-    /* width: 900px; */
 }

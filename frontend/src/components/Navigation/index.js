@@ -29,8 +29,6 @@ function Navigation({ isLoaded }){
           <LoginFormModal />
         </li>
         <li>
-          {/* <NavLink to="/signup">sign up</NavLink>
-           */}
            <SignupFormModal />
         </li>
       </>
@@ -42,7 +40,7 @@ function Navigation({ isLoaded }){
       <div className='navBarContent'>
         <ul className='narBarLeft'>
           <li>
-            <NavLink className='home' exact to="/">home</NavLink>
+            <NavLink className='home' exact to="/"><img className='kndl' src='https://res.cloudinary.com/zaf/image/upload/v1639380392/Screen_Shot_2021-12-13_at_2.26.02_AM_nbx4go.png' /></NavLink>
           </li>
         </ul>
         <ul className='navBarRight'>

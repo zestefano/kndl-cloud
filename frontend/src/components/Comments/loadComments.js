@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import DeleteComment from "./deleteComment";
-import EditComment from "./editComment";
 import './comments.css'
 
 

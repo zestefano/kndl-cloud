@@ -7,24 +7,12 @@
     width: 75%;
     margin: auto;
     padding: 10px;
-    border: 3px solid lightgray;
+    border: 3px solid gray;
     background-color: rgba(255, 255, 255, 0.091);
-    /* background-color: black; */
     margin-top: 100px;
 }
 
-/* body {
-    background-color: rgb(203, 133, 29);
-} */
 
-/* .songContainer {
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-} */
 
 .img {
     width: 300px;
@@ -38,29 +26,18 @@
     padding: 15px;
 }
 
-/* .song {
-    display: flex;
-    flex-direction: row-reverse;
-    width: 75%;
 
-} */
 
 .songLink {
     display: flex;
     justify-content: center;
-    color: gray;
+    color: black;
     font-weight: bolder;
 }
 
 .button {
     display: flex;
-    /* justify-content: end; */
     float: right;
-    /* margin-top: 28px; */
 
 }
 
-/* #link {
-    display: flex;
-    justify-content: space-evenly;
-} */

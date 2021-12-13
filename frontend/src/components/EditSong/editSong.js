@@ -38,28 +38,18 @@ const EditSong = ({id, showModal, editImg, editSong, editTitle, editDescription}
                 onChange={e => setTitle(e.target.value)}
                 value={title}
                 type='text'
-                // placeholder='edit title'
                 />
                 <p className='text'>url.jpg</p>
                  <input
                 onChange={e => setImgUrl(e.target.value)}
                 value={imgUrl}
                 type='text'
-                // placeholder='edit url.jpg'
                 />
-                {/* <p className='text'>url.mp3</p>
-                 <input
-                onChange={e => setSongUrl(e.target.value)}
-                value={songUrl}
-                type='text'
-                placeholder='edit url.mp3'
-                /> */}
                 <p className='text'>description</p>
                  <textarea
                 onChange={e => setDescription(e.target.value)}
                 value={description}
                 type='text'
-                // placeholder='edit description'
                 />
                 <button className='submit'>submit</button>
             </form>

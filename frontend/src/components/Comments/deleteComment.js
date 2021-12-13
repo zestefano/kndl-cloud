@@ -6,11 +6,9 @@ import { deleteAComment } from "../../store/commentReducer";
 const DeleteComment = ({id}) => {
    
     const dispatch = useDispatch()
-    // const history = useHistory()
 
     const onSubmit = () => {
         dispatch(deleteAComment(id))
-        // history.push(`/${songId}`)
     }
     return (
         <div>

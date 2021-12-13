@@ -1,125 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 
-/* .navContainer {
-    display: flex;
-    justify-content: flex-start;
-    padding: 15px;
-} */
 
-/* li {
-    color: rgb(47, 48, 50); 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    float: left;
-} */
 
-/* .sign {
-    display: flex;
-    justify-content: flex-end;
-    float: left;
-} */
-
-/* .pro {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-} */
-
-/* .home {
-    display: flex;
-    margin-left: 11.6%;
-} */
-
-/* header {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    background-color: #24252a;
-} */
-
-/* input {
-    font-family: "Montserrat";
-} */
+.kndl {
+    width: 136px;
+}
 
 li, button {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: "Montserrat";
-    flex-direction: row;
-    font-weight: 500;
-    font-size: 16px;
-    color: black;
-    text-decoration: none;
+    padding: 10px;
+    background-color: black;
+    color: whitesmoke;
+    border-radius: 5px;
+    transition-duration: .2s;
+    font-size: 15px;
 }
 
 div {
     font-family: "Montserrat";
 }
 
-/* header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    padding: 30px 10%;
-} */
-
-/* .nav{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 7rem;
-    background-color:rgb(255, 255, 255);
-    justify-content: space-between;
-
-}
-
-.navBtn{
-    width: 900px;
-    display:flex;
-    flex-direction: row-reverse;
-    justify-content: space-evenly;
-    gap: 1rem;
-    margin: 2rem;
-}
-
-.pro {
-    margin-left: 55%;
-}
-
- */
-/* .upload {
-    display: flex;
-    margin-left: 300px;
-} */
-
 
 .navBarContainer {
     width: 100%;
     position: fixed;
     top: 0;
-    background-color: white;
-    box-shadow: 0 10px 25px rgb(0 0 0 / 5%), 0 20px 48px rgb(0 0 0 / 5%), 0 1px 4px rgb(0 0 0 / 10%);
-    height: 50px;
+    background-color: black;
+    box-shadow: 0 20px 25px rgb(0 0 0 / 5%), 0 20px 48px rgb(0 0 0 / 5%), 0 1px 4px rgb(0 0 0 / 10%);
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1;
  }
 
 
  .navBarContent {
-    width: 85%;
-    max-width: 1280px;
     display: flex;
+    position: fixed;
     align-items: center;
     justify-content: space-between;
-    position: fixed;
-    padding-left: 40px;
-    padding-right: 40px;
-    font-family: 'Poppins', sans-serif;
+    padding-left: 20px;
+    padding-right: 70px;
+    width: 82%;
+    font-family: "Montserrat";
     font-size: 16px;
  }
 
@@ -128,7 +50,7 @@ div {
  }
  
  .navBarLeft li {
-    padding-right: 5px;
+    padding-right: 10px;
  }
  
  .navBarLeft {
@@ -146,75 +68,36 @@ div {
     padding-right: 5px;
  }
  
- .navBarRight li > button {
-    padding: 5px;
-    background-color: rgb(199, 45, 99);
-    color: whitesmoke;
-    border-radius: 5px;
-    transition-duration: .2s;
-    font-size: 10px;
- }
  
  .navBarRight li > button:hover {
-    background-color: rgb(165, 38, 83);
+    background-color: lightgray;
+ }
+
+ button:hover {
+    background-color: lightgray;
  }
 
  .profileButtonContainer {
-    position: fixed;
-    right: 0px;
-    top: 17px;
+    display: flex;
     position: absolute;
-    display: flex;
     flex-direction: row-reverse;
+    top: 32.5px;
+    right: 0px;
  }
  
- #profileButton {
-    font-size: 14px;
-    color: rgb(100, 100, 100);
-    border: 1px solid rgb(220, 220, 220);
-    border-radius: 15px;
-    width: 50px;
-    height: 30px;
-    padding: 8px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
- 
- }
  
  .profileDropdown {
-    position: relative;
     display: inline-block;
-    top: 50px;
-    left: 50px;
+    position: relative;
+    padding: 20px;
+    border-radius: 5px;
+    top: 60px;
+    left: 80px;
     background-color: white;
-    width: 200px;
-    border-radius: 10px;
-    padding: 10px;
+    width: 275px;
     box-shadow:0 5px 5px 2px rgba(0,0,0,0.06)
  }
  
  .profileDropdown > ul li {
-    font: 300 16px  poppins, sans-serif;
-    border-bottom: 1px solid #ccc;
- }
- 
- .profileDropdown > ul li > a {
-    width: 100%;
- }
- 
- .profileDropdown > ul li:last-child {
-    border: none;
- }
-
- #logoutBtn {
-    height: 25px;
-    width: 100%;
-    margin-top: 3px;
-    margin-left: 2px;
- }
-
- .profile {
-     background-color: white;
-     color: white;
+    border-bottom: 1px solid white;
  }

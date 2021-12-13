@@ -28,7 +28,6 @@ const EditComment = ({id, showModal, commentValue}) => {
                 onChange={e => setComment(e.target.value)}
                 value={comment}
                 type='textarea'
-                // placeholder='edit comment'
                 />
                 <button className='submit'>submit</button>
             </form>
