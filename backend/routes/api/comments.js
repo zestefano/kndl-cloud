@@ -11,7 +11,7 @@ const router = express.Router()
 
 const commentValidator = [
     check('comment')
-        .exists({ checkFalsy: true })
+        .exists()
         .not()
         .isEmpty()
         .withMessage('Comment cannot be blank'),
