@@ -23,7 +23,7 @@ const EditComment = ({id, showModal, commentValue}) => {
     return (
         <div>
             <form className='editCommentForm' onSubmit={onSubmit}>
-                <h2 className='text'>edit comment</h2>
+                <h2 className='commentEdit'>edit comment</h2>
                 <textarea
                 onChange={e => setComment(e.target.value)}
                 value={comment}

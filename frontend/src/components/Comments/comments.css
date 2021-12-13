@@ -28,3 +28,11 @@
     color: black;
     align-items: center;
 }
+
+.textComment {
+    color: white;
+}
+
+.commentDiv {
+    padding: 10px;
+}

@@ -1,9 +1,10 @@
 import ReactAudioPlayer from 'react-audio-player';
+import './audioPlayer.css'
 
 
 const AudioPlayer = ({songUrl, title}) => {
     return (
-        <div>
+        <div className='audioPlayer'>
             <ReactAudioPlayer
             src={songUrl}
             autoPlay={false}

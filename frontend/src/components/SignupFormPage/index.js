@@ -35,7 +35,7 @@ function SignupFormPage() {
         <ul>
           {errors.map((error, idx) => <li className='error' key={idx}>{error}</li>)}
         </ul>
-          <h2 className='text'>signup</h2>
+          <h2 className='signupText'>signup</h2>
             <input
             className='text'
             type="text"
@@ -67,7 +67,7 @@ function SignupFormPage() {
             placeholder='confirm password'
             required
             />
-        <button className='submit' type="submit">Sign Up</button>
+        <button className='submit' type="submit">sign up</button>
       </form>
     </div>
   );

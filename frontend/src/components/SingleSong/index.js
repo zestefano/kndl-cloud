@@ -27,8 +27,10 @@ const SinleSong = () => {
                 <h2>{song?.User?.username}</h2>
                 <h2>{song?.title}</h2>
                 <img className='imgSingle' src={song?.imgUrl} />
-                <div>{song?.description}</div>
-                <AudioPlayer songUrl={song?.songUrl}/>
+                <div className='description'>
+                    {song?.description}
+                </div>
+                    <AudioPlayer songUrl={song?.songUrl}/>
             </div>
             <h2 className='commentSection'>
                 comments:
