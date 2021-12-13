@@ -15,10 +15,6 @@ const Songs = () => {
     const sessionUser = useSelector((state) => state.session.user)
     const songs = useSelector((state) => Object.values(state.songs))
 
-    // const [url, setUrl] = useState('')
-
-
-    // const songUrl = songs.find(song => song.songUrl === url)
  
 
 
@@ -37,7 +33,6 @@ const Songs = () => {
                             <DeleteSong id={id}/>
                         </div>
                     )}
-                    {/* <p className='songLink'>{User.username}</p> */}
                     <Link className='songLink' id='link' to={`/${id}`}>{User.username}  -  {title}</Link>
                         <img src={imgUrl} className='img' />
                     <AudioPlayer songUrl={songUrl} title={title} />
@@ -45,7 +40,6 @@ const Songs = () => {
                 </div>
                 
                 ))}
-                {/* <AudioPlayer /> */}
         </div>
     )
 }
