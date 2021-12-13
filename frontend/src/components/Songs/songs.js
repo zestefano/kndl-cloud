@@ -33,9 +33,9 @@ const Songs = () => {
                             <DeleteSong id={id}/>
                         </div>
                     )}
-                    <Link className='songLink' id='link' to={`/${id}`}>{User.username}  -  {title}</Link>
-                        <img src={imgUrl} className='img' />
-                    <AudioPlayer songUrl={songUrl} title={title} />
+                        <Link className='songLink' id='link' to={`/${id}`}>{User.username}  -  {title}</Link>
+                            <img src={imgUrl} className='img' />
+                        <AudioPlayer songUrl={songUrl} title={title} />
                     </div>
                 </div>
                 
