@@ -1,32 +1,220 @@
-.navContainer {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+/* .navContainer {
     display: flex;
     justify-content: flex-start;
     padding: 15px;
-    /* width: 80%; */
-    /* float: right; */
-}
+} */
 
-li {
+/* li {
     color: rgb(47, 48, 50); 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     float: left;
-}
+} */
 
-.sign {
+/* .sign {
     display: flex;
     justify-content: flex-end;
     float: left;
-}
+} */
 
-.pro {
+/* .pro {
     display: flex;
     justify-content: center;
     flex-direction: row;
+} */
+
+/* .home {
+    display: flex;
+    margin-left: 11.6%;
+} */
+
+/* header {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #24252a;
+} */
+
+/* input {
+    font-family: "Montserrat";
+} */
+
+li, button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Montserrat";
+    flex-direction: row;
+    font-weight: 500;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
 }
 
-.home {
-    display: flex;
-    float: left;
+div {
+    font-family: "Montserrat";
 }
+
+/* header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 30px 10%;
+} */
+
+/* .nav{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 7rem;
+    background-color:rgb(255, 255, 255);
+    justify-content: space-between;
+
+}
+
+.navBtn{
+    width: 900px;
+    display:flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    gap: 1rem;
+    margin: 2rem;
+}
+
+.pro {
+    margin-left: 55%;
+}
+
+ */
+/* .upload {
+    display: flex;
+    margin-left: 300px;
+} */
+
+
+.navBarContainer {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    box-shadow: 0 10px 25px rgb(0 0 0 / 5%), 0 20px 48px rgb(0 0 0 / 5%), 0 1px 4px rgb(0 0 0 / 10%);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+ }
+
+
+ .navBarContent {
+    width: 85%;
+    max-width: 1280px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    padding-left: 40px;
+    padding-right: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+ }
+
+ .navBarContent ul {
+    list-style: none;
+ }
+ 
+ .navBarLeft li {
+    padding-right: 5px;
+ }
+ 
+ .navBarLeft {
+    width: 25%;
+ }
+
+ .navBarRight {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 25%;
+ }
+ 
+ .navBarRight li {
+    padding-right: 5px;
+ }
+ 
+ .navBarRight li > button {
+    padding: 5px;
+    background-color: rgb(199, 45, 99);
+    color: whitesmoke;
+    border-radius: 5px;
+    transition-duration: .2s;
+    font-size: 10px;
+ }
+ 
+ .navBarRight li > button:hover {
+    background-color: rgb(165, 38, 83);
+ }
+
+ .profileButtonContainer {
+    position: fixed;
+    right: 0px;
+    top: 17px;
+    position: absolute;
+    display: flex;
+    flex-direction: row-reverse;
+ }
+ 
+ #profileButton {
+    font-size: 14px;
+    color: rgb(100, 100, 100);
+    border: 1px solid rgb(220, 220, 220);
+    border-radius: 15px;
+    width: 50px;
+    height: 30px;
+    padding: 8px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+ 
+ }
+ 
+ .profileDropdown {
+    position: relative;
+    display: inline-block;
+    top: 50px;
+    left: 50px;
+    background-color: white;
+    width: 200px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow:0 5px 5px 2px rgba(0,0,0,0.06)
+ }
+ 
+ .profileDropdown > ul li {
+    font: 300 16px  poppins, sans-serif;
+    border-bottom: 1px solid #ccc;
+ }
+ 
+ .profileDropdown > ul li > a {
+    width: 100%;
+ }
+ 
+ .profileDropdown > ul li:last-child {
+    border: none;
+ }
+
+ #logoutBtn {
+    height: 25px;
+    width: 100%;
+    margin-top: 3px;
+    margin-left: 2px;
+ }
+
+ .profile {
+     background-color: white;
+     color: white;
+ }

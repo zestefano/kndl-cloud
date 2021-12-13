@@ -30,7 +30,7 @@ const EditComment = ({id, showModal, commentValue}) => {
                 type='textarea'
                 // placeholder='edit comment'
                 />
-                <button>submit</button>
+                <button className='submit'>submit</button>
             </form>
         </div>
     )

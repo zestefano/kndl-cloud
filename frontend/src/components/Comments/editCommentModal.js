@@ -8,7 +8,7 @@ const EditCommentModal = ({id, commentValue}) => {
     return (
         <div>
             <button onClick={() => setModal(true)}>
-                edit
+                <i class="fas fa-edit"></i>
             </button>
             {modal && (
                 <Modal onClose={() => setModal(false)}>

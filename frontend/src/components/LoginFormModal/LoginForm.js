@@ -50,7 +50,7 @@ function LoginForm() {
           required
         />
       {/* </label> */}
-      <button type="submit">Log In</button>
+      <button className='submit' type="submit">Log In</button>
     </form>
   );
 }

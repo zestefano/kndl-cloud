@@ -1,12 +1,6 @@
 import { useDispatch } from "react-redux";
-// import { useEffect } from "react";
-// import { useHistory } from "react-router";
-// import { deleteASong } from "../../store/songReducer";
 import { deleteAComment } from "../../store/commentReducer";
-// import { useParams } from "react-router";
-// import '../DeleteSong/deleteSong.css'
 
-// import { getAllComments } from "../../store/commentReducer";
 
 
 const DeleteComment = ({id}) => {
@@ -24,7 +18,7 @@ const DeleteComment = ({id}) => {
             onClick={() => onSubmit(id)}
             id={id}
             >
-                delete
+                <i class="fas fa-trash"></i>
             </button>
         </div>
     )

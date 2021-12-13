@@ -12,28 +12,40 @@ function Navigation({ isLoaded }){
   let sessionLinks;
   if (sessionUser) {
     sessionLinks = (
-      <div className='pro'>
-        <ProfileButton user={sessionUser} />
-        <UploadSong />
-      </div>
+      <>
+        <li>
+          <ProfileButton user={sessionUser} />
+        </li>
+        <li>
+          <UploadSong className='upload' />
+        </li>
+      </>
     );
   } else {
     sessionLinks = (
       <>
-        <LoginFormModal />
-        <NavLink className='sign' to="/signup">sign up</NavLink>
+        <li>
+          <LoginFormModal />
+        </li>
+        <li>
+          <NavLink to="/signup">sign up</NavLink>
+        </li>
       </>
     );
   }
 
   return (
-    <div className='navContainer'>
-      <ul>
-        <li>
-          <NavLink className='home' exact to="/">home</NavLink>
-          {isLoaded && sessionLinks}
-        </li>
-      </ul>
+    <div className='navBarContainer'>
+      <div className='navBarContent'>
+        <ul className='narBarLeft'>
+          <li>
+            <NavLink className='home' exact to="/">home</NavLink>
+          </li>
+        </ul>
+        <ul className='navBarRight'>
+          {isLoaded && sessionLinks} 
+        </ul>
+      </div>
     </div>
   );
 }

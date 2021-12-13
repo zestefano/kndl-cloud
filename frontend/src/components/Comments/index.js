@@ -5,7 +5,7 @@ import GetComments from './loadComments';
 // import AddComment from './addComment';
 import AddCommentModal from './addCommentModal';
 import EditCommentModal from './editCommentModal';
-
+import './comments.css'
 
 
 const Comments = ({userId, songId}) => {
@@ -13,10 +13,15 @@ const Comments = ({userId, songId}) => {
 
     return (
         <div>
-            <div>
-            <AddCommentModal userId={userId} songId={songId}/>
+            {sessionUser?.id === userId && (
+                <div>
+                    <AddCommentModal userId={userId} songId={songId}/>
+                </div>
+
+            )}
+            <div className='getComments'>
+                <GetComments userId={userId} songId={songId}/>
             </div>
-            <GetComments userId={userId} songId={songId}/>
         </div>
     )
 }

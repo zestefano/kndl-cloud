@@ -11,7 +11,7 @@ const AddCommentModal = ({userId, songId}) => {
         <div>
             <div className='edit'>
             <button onClick={() => setModal(true)}>
-                add a comment
+                add comment
             </button>
             </div>
             {modal && (

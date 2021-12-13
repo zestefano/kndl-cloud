@@ -16,6 +16,13 @@
     margin: auto;
     padding: 10px;
     border: 3px solid lightgray;
+    margin-top: 100px;
     /* margin-left: 50%;
     margin-right: 50%; */
+}
+
+.commentSection {
+    display: flex;
+    justify-content: center;
+    /* width: 900px; */
 }

@@ -32,31 +32,36 @@ const EditSong = ({id, showModal, editImg, editSong, editTitle, editDescription}
         <div>
             <form className='editSong' onSubmit={onSubmit}> 
                 <h2 className='text'>edit</h2>
+                <break />
+                <p className='text'>title</p>
                 <input
                 onChange={e => setTitle(e.target.value)}
                 value={title}
                 type='text'
                 // placeholder='edit title'
                 />
+                <p className='text'>url.jpg</p>
                  <input
                 onChange={e => setImgUrl(e.target.value)}
                 value={imgUrl}
                 type='text'
                 // placeholder='edit url.jpg'
                 />
+                {/* <p className='text'>url.mp3</p>
                  <input
                 onChange={e => setSongUrl(e.target.value)}
                 value={songUrl}
                 type='text'
-                // placeholder='edit url.mp3'
-                />
-                 <input
+                placeholder='edit url.mp3'
+                /> */}
+                <p className='text'>description</p>
+                 <textarea
                 onChange={e => setDescription(e.target.value)}
                 value={description}
                 type='text'
                 // placeholder='edit description'
                 />
-                <button>submit</button>
+                <button className='submit'>submit</button>
             </form>
         </div>
     )
