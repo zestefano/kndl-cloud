@@ -57,7 +57,7 @@ const AddComment = ({songId, showModal}) => {
                 />
                 <button
                 className='submit'
-                disabled={comment ? false : true}
+                // disabled={comment ? false : true}
                 >submit</button>
             </form>
         </div>
