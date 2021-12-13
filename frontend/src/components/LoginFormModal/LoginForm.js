@@ -33,7 +33,7 @@ function LoginForm() {
           <li className='error' key={idx}>{error}</li>
         ))}
       </ul>
-      <h2 className='text'>login</h2>
+      <h2 className='loginText'>login</h2>
        
         <input
           placeholder='username or email'
@@ -51,7 +51,7 @@ function LoginForm() {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-      <button className='submit' type="submit">Log In</button>
+      <button className='submit' type="submit">log in</button>
       <button className='submit' onClick={demo}>demo</button>
     </form>
   );

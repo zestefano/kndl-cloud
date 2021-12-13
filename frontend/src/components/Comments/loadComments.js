@@ -32,7 +32,7 @@ const GetComments = ({userId, songId}) => {
                     <b>{User.username}:</b>
                 </div>
                 <break />
-                <div>
+                <div className='commentDiv'>
                     {comment}
                 </div>
                 {sessionUser?.id === User?.id && (

@@ -31,21 +31,21 @@ const EditSong = ({id, showModal, editImg, editSong, editTitle, editDescription}
     return (
         <div>
             <form className='editSong' onSubmit={onSubmit}> 
-                <h2 className='text'>edit</h2>
+                <h2 className='textEdit'>edit</h2>
                 <break />
-                <p className='text'>title</p>
+                <p className='textEdit'>title</p>
                 <input
                 onChange={e => setTitle(e.target.value)}
                 value={title}
                 type='text'
                 />
-                <p className='text'>url.jpg</p>
+                <p className='textEdit'>url.jpg</p>
                  <input
                 onChange={e => setImgUrl(e.target.value)}
                 value={imgUrl}
                 type='text'
                 />
-                <p className='text'>description</p>
+                <p className='textEdit'>description</p>
                  <textarea
                 onChange={e => setDescription(e.target.value)}
                 value={description}

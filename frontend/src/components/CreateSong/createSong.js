@@ -45,7 +45,7 @@ const CreateSong = ({showModal}) => {
                         <li key={idx} className='error'>{error}</li>
                     ))}
                 </ul>
-                <h2 className='text'>upload</h2>
+                <h2 className='textUp'>upload</h2>
                 <input
                     onChange={e => setTitle(e.target.value)}
                     value={title}

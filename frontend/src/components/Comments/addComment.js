@@ -48,6 +48,7 @@ const AddComment = ({songId, showModal}) => {
                         <li className='error' key={idx}>{error}</li>
                     ))}
                 </ul>
+                <h2 className='textComment'>add comment</h2>
                 <textarea
                 type='text'
                 placeholder='add comment'
