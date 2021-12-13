@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 
 import { addAComment } from "../../store/commentReducer";
 import '../Comments/addComment.css'
 
-const AddComment = ({userId, songId, showModal}) => {
+const AddComment = ({songId, showModal}) => {
     
     const dispatch = useDispatch()
+    const userId = useSelector((state) => state.session.user.id)
 
 
     const [comment, setComment] = useState('')
